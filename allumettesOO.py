@@ -22,7 +22,7 @@ class allumette():
     """
     def __init__(self, n):
         self.allumettes = n
-        self.limit = 2
+        self.limit = 1
 
     def afficheStatut(self, text):
         """
@@ -38,7 +38,7 @@ class allumette():
         Méthode pour gérer un coup.
         C'est à dire retirer nb allumettes et mettre à jour la limite du coup suivant
         """
-        retrait = min(nb, self.limit)
+        #retrait = min(nb, self.limit)
         self.allumettes -= retrait
         self.limit = 2*retrait
         if (self.allumettes > 0):
